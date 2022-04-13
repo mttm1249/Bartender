@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DrinkCell" rowHeight="150" id="SQW-0L-7uA" customClass="DrinkCell" customModule="Bartender" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SQW-0L-7uA" id="g15-Wj-ney">
+                <rect key="frame" x="0.0" y="0.0" width="415" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNw-Z8-eEC">
+                        <rect key="frame" x="13" y="11" width="121" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="128" id="WWm-Ao-R1d"/>
+                            <constraint firstAttribute="width" constant="121" id="uVr-XM-VyR"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название напитка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YVB-eY-Eae">
+                        <rect key="frame" x="155" y="11" width="240" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="cAt-RX-RF6"/>
+                            <constraint firstAttribute="width" constant="240" id="det-gq-0LQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Алкогольный/Безалкогольный" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OoH-0i-Bck">
+                        <rect key="frame" x="155" y="52" width="240" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="POL-f5-oov"/>
+                            <constraint firstAttribute="height" constant="21" id="dWD-hw-H4k"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какой бокал используется" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBG-nI-YrQ">
+                        <rect key="frame" x="155" y="81" width="240" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="bUo-Bg-SyM"/>
+                            <constraint firstAttribute="width" constant="240" id="kuM-iv-VET"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория напитка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7D2-zP-MXI">
+                        <rect key="frame" x="155" y="118" width="240" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="TLT-QP-BpE"/>
+                            <constraint firstAttribute="height" constant="21" id="udS-B7-UUn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YVB-eY-Eae" firstAttribute="leading" secondItem="RNw-Z8-eEC" secondAttribute="trailing" constant="21" id="362-eR-nbS"/>
+                    <constraint firstItem="RNw-Z8-eEC" firstAttribute="top" secondItem="g15-Wj-ney" secondAttribute="top" constant="11" id="3Xa-mU-bVI"/>
+                    <constraint firstItem="RNw-Z8-eEC" firstAttribute="leading" secondItem="g15-Wj-ney" secondAttribute="leading" constant="13" id="GJv-7h-PUV"/>
+                    <constraint firstItem="YVB-eY-Eae" firstAttribute="top" secondItem="g15-Wj-ney" secondAttribute="top" constant="11" id="S6E-Zb-DbC"/>
+                    <constraint firstItem="KBG-nI-YrQ" firstAttribute="trailing" secondItem="g15-Wj-ney" secondAttribute="trailingMargin" id="dvP-WN-fZm"/>
+                    <constraint firstItem="OoH-0i-Bck" firstAttribute="top" secondItem="YVB-eY-Eae" secondAttribute="bottom" constant="8" id="fsj-c1-m5j"/>
+                    <constraint firstItem="OoH-0i-Bck" firstAttribute="trailing" secondItem="g15-Wj-ney" secondAttribute="trailingMargin" id="gXc-c5-lWx"/>
+                    <constraint firstAttribute="bottom" secondItem="RNw-Z8-eEC" secondAttribute="bottom" constant="11" id="hYA-qX-BFy"/>
+                    <constraint firstItem="YVB-eY-Eae" firstAttribute="trailing" secondItem="g15-Wj-ney" secondAttribute="trailingMargin" id="ixY-GI-yIf"/>
+                    <constraint firstItem="OoH-0i-Bck" firstAttribute="leading" secondItem="RNw-Z8-eEC" secondAttribute="trailing" constant="21" id="jJj-aO-vuF"/>
+                    <constraint firstAttribute="bottom" secondItem="7D2-zP-MXI" secondAttribute="bottom" constant="11" id="n7a-jU-XDC"/>
+                    <constraint firstItem="7D2-zP-MXI" firstAttribute="leading" secondItem="RNw-Z8-eEC" secondAttribute="trailing" constant="21" id="rbH-LW-Wzi"/>
+                    <constraint firstAttribute="trailing" secondItem="7D2-zP-MXI" secondAttribute="trailing" constant="20" symbolic="YES" id="uFf-6V-oRI"/>
+                    <constraint firstItem="KBG-nI-YrQ" firstAttribute="leading" secondItem="RNw-Z8-eEC" secondAttribute="trailing" constant="21" id="whL-jT-8mP"/>
+                    <constraint firstItem="7D2-zP-MXI" firstAttribute="top" secondItem="KBG-nI-YrQ" secondAttribute="bottom" constant="16" id="x2N-Q0-67e"/>
+                    <constraint firstItem="KBG-nI-YrQ" firstAttribute="top" secondItem="OoH-0i-Bck" secondAttribute="bottom" constant="8" symbolic="YES" id="z7c-1Z-M7F"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="drinkCategory" destination="7D2-zP-MXI" id="Vbh-Cw-qoO"/>
+                <outlet property="drinkGlass" destination="KBG-nI-YrQ" id="q8A-bF-QAP"/>
+                <outlet property="drinkImage" destination="RNw-Z8-eEC" id="CP2-Aw-sK1"/>
+                <outlet property="drinkName" destination="YVB-eY-Eae" id="m1s-Ox-qYK"/>
+                <outlet property="drinkType" destination="OoH-0i-Bck" id="DcL-y8-KME"/>
+            </connections>
+            <point key="canvasLocation" x="151.44927536231884" y="139.28571428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
