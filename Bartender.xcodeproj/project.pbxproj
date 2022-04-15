@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		924E2F6AD77B34FF5F5D9EEC /* Pods_Bartender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAA5D221DA5F89A60FE541F /* Pods_Bartender.framework */; };
+		DA1EAEEA28071910004C4121 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1EAEE928071910004C4121 /* IngredientCell.swift */; };
 		DA51CBF02806E55600AB8F56 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51CBEF2806E55600AB8F56 /* DetailsViewController.swift */; };
 		DA51CBF22806E56300AB8F56 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51CBF12806E56300AB8F56 /* FavoritesViewController.swift */; };
 		DA51CBF52806F2A300AB8F56 /* Extesions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51CBF42806F2A300AB8F56 /* Extesions.swift */; };
@@ -27,6 +28,7 @@
 		11FA98FFAB616A25AABA45CD /* Pods-Bartender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bartender.debug.xcconfig"; path = "Target Support Files/Pods-Bartender/Pods-Bartender.debug.xcconfig"; sourceTree = "<group>"; };
 		5E61B63C6973CA4F7C702E7A /* Pods-Bartender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bartender.release.xcconfig"; path = "Target Support Files/Pods-Bartender/Pods-Bartender.release.xcconfig"; sourceTree = "<group>"; };
 		AFAA5D221DA5F89A60FE541F /* Pods_Bartender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bartender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1EAEE928071910004C4121 /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		DA51CBEF2806E55600AB8F56 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		DA51CBF12806E56300AB8F56 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		DA51CBF42806F2A300AB8F56 /* Extesions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extesions.swift; sourceTree = "<group>"; };
@@ -109,17 +111,9 @@
 				DAE6DC17280563F100F3B430 /* Model */,
 				DAE6DC16280563EA00F3B430 /* View */,
 				DAE6DC15280563E200F3B430 /* Controller */,
-				DAE6DC14280563D200F3B430 /* Networking */,
 				DA51CBF32806F28000AB8F56 /* Supporting Files */,
 			);
 			path = Bartender;
-			sourceTree = "<group>";
-		};
-		DAE6DC14280563D200F3B430 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		DAE6DC15280563E200F3B430 /* Controller */ = {
@@ -137,8 +131,9 @@
 			children = (
 				DAE6DC0B280562E100F3B430 /* LaunchScreen.storyboard */,
 				DAE6DC06280562DE00F3B430 /* Main.storyboard */,
-				DAE6DC1A280567C900F3B430 /* DrinkCell.swift */,
 				DAE6DC1C280568CA00F3B430 /* DrinkCell.xib */,
+				DAE6DC1A280567C900F3B430 /* DrinkCell.swift */,
+				DA1EAEE928071910004C4121 /* IngredientCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +269,7 @@
 				DAE6DC1B280567C900F3B430 /* DrinkCell.swift in Sources */,
 				DAE6DC05280562DE00F3B430 /* ViewController.swift in Sources */,
 				DA51CBF02806E55600AB8F56 /* DetailsViewController.swift in Sources */,
+				DA1EAEEA28071910004C4121 /* IngredientCell.swift in Sources */,
 				DA51CBF52806F2A300AB8F56 /* Extesions.swift in Sources */,
 				DAE6DC01280562DE00F3B430 /* AppDelegate.swift in Sources */,
 				DAE6DC03280562DE00F3B430 /* SceneDelegate.swift in Sources */,
@@ -352,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -406,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

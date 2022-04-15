@@ -11,11 +11,13 @@ extension ViewController: UITextFieldDelegate {}
 extension ViewController: UITableViewDelegate {}
 extension ViewController: UITableViewDataSource {
     
+    // Register custom cell
     func registerTableViewCells() {
         let textFieldCell = UINib(nibName: "DrinkCell", bundle: nil)
         self.tableView.register(textFieldCell,forCellReuseIdentifier: "DrinkCell")
     }
     
+    // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "DrinkCell", for: indexPath) as? DrinkCell {
             let drinks = drinks[indexPath.row]
@@ -42,8 +44,32 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "details", sender: nil)
     }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let editAction = UIContextualAction(style: .normal, title: "★") { (action, view, completion) in
+            let indexesToRedraw = [indexPath]
+            let drink = self.drinks[indexPath.row]
+            let drinkName = drink.strDrink
+            
+            
+            let userDefaults = UserDefaults.standard
+            userDefaults.appendToFavoritesArray(by: drinkName)
+//            var strings: [String] = userDefaults.stringArray(forKey: "favorite") ?? []
+//            strings.append(drinkName)
+//            userDefaults.set(strings, forKey: "favorite")
+            
+            tableView.reloadRows(at: indexesToRedraw, with: .fade)
+            tableView.reloadData()
+        }
+        editAction.backgroundColor = .systemGreen
+        let config = UISwipeActionsConfiguration(actions: [editAction])
+        config.performsFirstActionWithFullSwipe = true
+        return config
+    }
 }
 
+// MARK: - Images activity indicator
 extension UIImageView {
     func loadingIndicator() {
         var kf = self.kf
@@ -61,5 +87,15 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+// MARK: - UserDefaults
+extension UserDefaults {
+    func appendToFavoritesArray(by string: String) {
+        let userDefaults = UserDefaults.standard
+        var strings: [String] = userDefaults.stringArray(forKey: "favorite") ?? []
+        strings.append(string)
+        userDefaults.set(strings, forKey: "favorite")
     }
 }

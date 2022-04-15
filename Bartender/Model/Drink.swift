@@ -14,6 +14,7 @@ struct Drink: Codable {
     var strDrinkThumb: String
     var strCategory: String
     var strInstructions: String
+
     var strIngredient1: String?
     var strIngredient2: String?
     var strIngredient3: String?
@@ -29,6 +30,7 @@ struct Drink: Codable {
     var strIngredient13: String?
     var strIngredient14: String?
     var strIngredient15: String?
+    
     var strMeasure1: String?
     var strMeasure2: String?
     var strMeasure3: String?
@@ -45,3 +47,8 @@ struct Drink: Codable {
     var strMeasure14: String?
     var strMeasure15: String?
 }
+
+
+
+
+

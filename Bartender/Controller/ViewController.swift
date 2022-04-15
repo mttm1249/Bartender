@@ -8,22 +8,25 @@
 import UIKit
 import Kingfisher
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DataSendingDelegateProtocol {
+    
+    let apiKey = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+    var drinks = [Drink]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
     
-    var drinks = [Drink]()
-    let urlString = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         self.searchTextField.delegate = self
         registerTableViewCells()
+        loadData(with: apiKey)
         hideKeyboardWhenTappedAround()
     }
     
-    func loadData(with string: String) {
+    private func loadData(with string: String) {
         if let url = URL(string: string) {
             if let data = try? Data(contentsOf: url) {
                 parse(json: data)
@@ -32,29 +35,27 @@ class ViewController: UIViewController {
         }
     }
     
+    // "Search" key pressed on keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchTextField.resignFirstResponder()
         performAction()
         return true
     }
     
     private func performAction() {
-        findButton(self)
-    }
-    
-    @IBAction func randomButton(_ sender: Any) {
-        let urlString = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-        loadData(with: urlString)
-    }
-    @IBAction func findButton(_ sender: Any) {
         guard let text = searchTextField.text else { return }
-        let urlString = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + "\(text)"
-
+        let urlString = apiKey + text
+        
         loadData(with: urlString)
         searchTextField.endEditing(true)
     }
     
-    func parse(json: Data) {
+    @IBAction func randomButton(_ sender: Any) {
+        let urlString = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+        
+        loadData(with: urlString)
+    }
+    
+    private func parse(json: Data) {
         let decoder = JSONDecoder()
         if let jsonDrinks = try? decoder.decode(Drinks.self, from: json) {
             drinks = jsonDrinks.drinks
@@ -64,14 +65,29 @@ class ViewController: UIViewController {
         }
     }
     
+    // Passing data from FavoritesViewController
+    internal func sendDataToFirstViewController(string: String) {
+        let urlString = apiKey + string
+        
+        loadData(with: urlString)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "details" {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            
             let drink = drinks[indexPath.row]
             let detailsVC = segue.destination as! DetailsViewController
             detailsVC.currentDrink = drink
         }
+        
+        if segue.identifier == "favorite" {
+            let secondVC: FavoritesViewController = segue.destination as! FavoritesViewController
+            secondVC.delegate = self
+        }
+    }
+    
+    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
+        guard segue.identifier == "unwindSegue" else { return }
     }
 }
 
