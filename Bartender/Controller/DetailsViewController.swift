@@ -14,7 +14,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     var ingredientsArray: [String] = []
     var measureArray: [String] = []
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
-
+    
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -33,10 +33,26 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func addToFavoritesButton(_ sender: Any) {
         feedbackGenerator.impactOccurred()
+        animate(nameLabel)
         let userDefaults = UserDefaults.standard
         if let text = nameLabel.text {
             userDefaults.appendToFavoritesArray(by: text)
         }
+    }
+    
+    private func animate(_ label: UILabel) {
+        label.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        
+        UIView.animate(withDuration: 0.9,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(1.0),
+                       initialSpringVelocity: CGFloat(60.0),
+                       options: UIView.AnimationOptions.allowUserInteraction,
+                       animations: {
+            label.transform = CGAffineTransform.identity
+        },
+                       completion: { Void in()  }
+        )
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

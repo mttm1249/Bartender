@@ -77,19 +77,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="6cY-VH-0kW" secondAttribute="top" constant="-8" id="6u9-1K-rHG"/>
+                            <constraint firstItem="6cY-VH-0kW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="3LB-iT-MpH"/>
                             <constraint firstItem="6Kq-0F-2ov" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8NM-co-sP1"/>
                             <constraint firstItem="6cY-VH-0kW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gwr-Ry-0dY" secondAttribute="trailing" constant="8" symbolic="YES" id="CzN-cu-5SK"/>
                             <constraint firstItem="Gwr-Ry-0dY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="W6X-FU-mfd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aqi-Un-2Rj" secondAttribute="trailing" constant="20" id="boi-yA-5NC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Gwr-Ry-0dY" secondAttribute="top" constant="-8" id="d1b-YC-C5L"/>
                             <constraint firstItem="6Kq-0F-2ov" firstAttribute="top" secondItem="6cY-VH-0kW" secondAttribute="bottom" constant="10" id="g8M-ZC-M78"/>
                             <constraint firstItem="6Kq-0F-2ov" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hI2-tD-NzS"/>
+                            <constraint firstItem="Gwr-Ry-0dY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="ney-XS-L99"/>
                             <constraint firstAttribute="bottom" secondItem="6Kq-0F-2ov" secondAttribute="bottom" constant="34" id="oFh-cE-tq3"/>
                             <constraint firstItem="Aqi-Un-2Rj" firstAttribute="leading" secondItem="6cY-VH-0kW" secondAttribute="trailing" constant="10" id="oSz-iL-rDh"/>
-                            <constraint firstItem="Aqi-Un-2Rj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="ojq-ho-HrT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6cY-VH-0kW" secondAttribute="trailing" constant="80" id="qVY-RO-A1s"/>
                             <constraint firstItem="6Kq-0F-2ov" firstAttribute="top" secondItem="Gwr-Ry-0dY" secondAttribute="bottom" constant="10" id="qYr-xV-9D2"/>
+                            <constraint firstItem="Aqi-Un-2Rj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="sDb-Kb-Sqc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jsk-ht-5tm"/>
@@ -137,10 +137,10 @@
                         <viewLayoutGuide key="safeArea" id="tzL-tU-GxX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6vb-pY-xNg" firstAttribute="top" secondItem="tzL-tU-GxX" secondAttribute="top" id="JBv-C2-ASY"/>
-                            <constraint firstItem="6vb-pY-xNg" firstAttribute="bottom" secondItem="tzL-tU-GxX" secondAttribute="bottom" id="ToJ-mE-yVG"/>
-                            <constraint firstItem="6vb-pY-xNg" firstAttribute="leading" secondItem="tzL-tU-GxX" secondAttribute="leading" id="Tpk-qr-Aig"/>
-                            <constraint firstItem="6vb-pY-xNg" firstAttribute="trailing" secondItem="tzL-tU-GxX" secondAttribute="trailing" id="yEX-iX-5yn"/>
+                            <constraint firstItem="6vb-pY-xNg" firstAttribute="trailing" secondItem="tzL-tU-GxX" secondAttribute="trailing" id="PxN-m8-GX1"/>
+                            <constraint firstItem="6vb-pY-xNg" firstAttribute="top" secondItem="tzL-tU-GxX" secondAttribute="top" id="gdx-el-d3j"/>
+                            <constraint firstItem="6vb-pY-xNg" firstAttribute="leading" secondItem="tzL-tU-GxX" secondAttribute="leading" id="jBY-08-jMN"/>
+                            <constraint firstItem="6vb-pY-xNg" firstAttribute="bottom" secondItem="tzL-tU-GxX" secondAttribute="bottom" id="uy7-za-9Aa"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="fsT-ji-qCD">
@@ -268,7 +268,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zcw-5M-dHZ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kIM-d7-2TO">
+                        <barButtonItem key="rightBarButtonItem" title="Add to favorites" style="plain" id="kIM-d7-2TO">
                             <connections>
                                 <action selector="addToFavoritesButton:" destination="WI7-AO-FCY" id="axv-Ec-lDF"/>
                             </connections>
