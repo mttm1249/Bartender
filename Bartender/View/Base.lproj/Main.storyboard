@@ -36,18 +36,14 @@
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Find cocktail by name!" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Gwr-Ry-0dY">
                                 <rect key="frame" x="20" y="96" width="255" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="anr-g0-Dso"/>
-                                    <constraint firstAttribute="height" constant="34" id="sg5-kh-pdN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cY-VH-0kW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cY-VH-0kW">
                                 <rect key="frame" x="284" y="96" width="50" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="miA-az-WpF"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="q5e-kB-tCf"/>
+                                    <constraint firstAttribute="height" constant="34" id="3Fw-Aj-MM1"/>
+                                    <constraint firstAttribute="width" constant="50" id="ocU-gG-HRB"/>
                                 </constraints>
                                 <color key="tintColor" red="0.60063436007946258" green="0.020475294122409227" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -61,8 +57,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqi-Un-2Rj">
                                 <rect key="frame" x="344" y="96" width="50" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="EHT-2t-1qG"/>
-                                    <constraint firstAttribute="height" constant="34" id="KOR-xE-h9N"/>
+                                    <constraint firstAttribute="height" constant="34" id="naf-It-8ky"/>
+                                    <constraint firstAttribute="width" constant="50" id="sCH-a6-A0C"/>
                                 </constraints>
                                 <color key="tintColor" red="0.60063436010000004" green="0.020475294120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -77,19 +73,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6cY-VH-0kW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="3LB-iT-MpH"/>
+                            <constraint firstItem="6cY-VH-0kW" firstAttribute="leading" secondItem="Gwr-Ry-0dY" secondAttribute="trailing" constant="9" id="1Bt-XG-rsw"/>
+                            <constraint firstItem="Gwr-Ry-0dY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="89e-c5-fcE"/>
                             <constraint firstItem="6Kq-0F-2ov" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8NM-co-sP1"/>
-                            <constraint firstItem="6cY-VH-0kW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gwr-Ry-0dY" secondAttribute="trailing" constant="8" symbolic="YES" id="CzN-cu-5SK"/>
-                            <constraint firstItem="Gwr-Ry-0dY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="W6X-FU-mfd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aqi-Un-2Rj" secondAttribute="trailing" constant="20" id="boi-yA-5NC"/>
-                            <constraint firstItem="6Kq-0F-2ov" firstAttribute="top" secondItem="6cY-VH-0kW" secondAttribute="bottom" constant="10" id="g8M-ZC-M78"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aqi-Un-2Rj" secondAttribute="trailing" constant="20" id="IEf-6V-OIQ"/>
+                            <constraint firstItem="Aqi-Un-2Rj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="IPH-Uy-GhZ"/>
+                            <constraint firstItem="6Kq-0F-2ov" firstAttribute="top" secondItem="Gwr-Ry-0dY" secondAttribute="bottom" constant="10" id="S4p-ac-PdL"/>
+                            <constraint firstItem="Aqi-Un-2Rj" firstAttribute="leading" secondItem="6cY-VH-0kW" secondAttribute="trailing" constant="10" id="T9l-Ww-2lq"/>
+                            <constraint firstItem="Gwr-Ry-0dY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Wr1-W3-0DL"/>
                             <constraint firstItem="6Kq-0F-2ov" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hI2-tD-NzS"/>
-                            <constraint firstItem="Gwr-Ry-0dY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="ney-XS-L99"/>
+                            <constraint firstItem="6cY-VH-0kW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="hQ1-1U-sTK"/>
                             <constraint firstAttribute="bottom" secondItem="6Kq-0F-2ov" secondAttribute="bottom" constant="34" id="oFh-cE-tq3"/>
-                            <constraint firstItem="Aqi-Un-2Rj" firstAttribute="leading" secondItem="6cY-VH-0kW" secondAttribute="trailing" constant="10" id="oSz-iL-rDh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6cY-VH-0kW" secondAttribute="trailing" constant="80" id="qVY-RO-A1s"/>
-                            <constraint firstItem="6Kq-0F-2ov" firstAttribute="top" secondItem="Gwr-Ry-0dY" secondAttribute="bottom" constant="10" id="qYr-xV-9D2"/>
-                            <constraint firstItem="Aqi-Un-2Rj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="sDb-Kb-Sqc"/>
+                            <constraint firstItem="6Kq-0F-2ov" firstAttribute="top" secondItem="Aqi-Un-2Rj" secondAttribute="bottom" constant="10" id="pWJ-XZ-jwe"/>
+                            <constraint firstItem="6Kq-0F-2ov" firstAttribute="top" secondItem="6cY-VH-0kW" secondAttribute="bottom" constant="10" id="tQs-hT-m8G"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jsk-ht-5tm"/>

@@ -21,7 +21,6 @@
 		DAE6DC192805640700F3B430 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6DC182805640700F3B430 /* Drink.swift */; };
 		DAE6DC1B280567C900F3B430 /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6DC1A280567C900F3B430 /* DrinkCell.swift */; };
 		DAE6DC1D280568CA00F3B430 /* DrinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE6DC1C280568CA00F3B430 /* DrinkCell.xib */; };
-		DAED98CF2806B8FF00671CA8 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED98CE2806B8FF00671CA8 /* Drinks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		DAE6DC182805640700F3B430 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		DAE6DC1A280567C900F3B430 /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
 		DAE6DC1C280568CA00F3B430 /* DrinkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCell.xib; sourceTree = "<group>"; };
-		DAED98CE2806B8FF00671CA8 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				DAE6DC182805640700F3B430 /* Drink.swift */,
-				DAED98CE2806B8FF00671CA8 /* Drinks.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,7 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAED98CF2806B8FF00671CA8 /* Drinks.swift in Sources */,
 				DAE6DC192805640700F3B430 /* Drink.swift in Sources */,
 				DA51CBF22806E56300AB8F56 /* FavoritesViewController.swift in Sources */,
 				DAE6DC1B280567C900F3B430 /* DrinkCell.swift in Sources */,

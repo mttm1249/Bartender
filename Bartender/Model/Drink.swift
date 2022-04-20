@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct Drinks: Codable {
+    var drinks: [Drink]
+}
+
 struct Drink: Codable {
     var strDrink: String
     var strAlcoholic: String
@@ -47,8 +51,6 @@ struct Drink: Codable {
     var strMeasure14: String?
     var strMeasure15: String?
 }
-
-
 
 
 

@@ -9,6 +9,7 @@ import UIKit
 
 extension ViewController: UITextFieldDelegate {}
 extension ViewController: UITableViewDelegate {}
+
 extension ViewController: UITableViewDataSource {
     
     // Register custom cell
@@ -52,12 +53,8 @@ extension ViewController: UITableViewDataSource {
             let drink = self.drinks[indexPath.row]
             let drinkName = drink.strDrink
             
-            
             let userDefaults = UserDefaults.standard
             userDefaults.appendToFavoritesArray(by: drinkName)
-//            var strings: [String] = userDefaults.stringArray(forKey: "favorite") ?? []
-//            strings.append(drinkName)
-//            userDefaults.set(strings, forKey: "favorite")
             
             tableView.reloadRows(at: indexesToRedraw, with: .fade)
             tableView.reloadData()
