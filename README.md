@@ -8,4 +8,4 @@
 
 <img src="https://user-images.githubusercontent.com/87662841/164257140-51d1afd8-999a-4f4c-b46c-ee0efd47b97a.png" width="230" height="530"> <img src="https://user-images.githubusercontent.com/87662841/164257233-64db82a7-307c-46e1-b024-5d564c629b79.png" width="230" height="530">  
 
-#### Stack: Swift, UIKit, Kingfisher, UserDefaults
+#### Stack: Swift, UIKit, Kingfisher
